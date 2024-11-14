@@ -291,5 +291,6 @@ Este é o modo mais drástico. Move o ponteiro do HEAD para o commit especificad
 Quando usar:
 - Quando você quer desfazer commits e descartar todas as alterações feitas nos arquivos desde esse commit. Use com cuidado, pois as alterações serão perdidas permanentemente.
 
+---
 
 **por: Vinicius Mariath**
