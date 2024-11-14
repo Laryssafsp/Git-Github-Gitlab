@@ -7,11 +7,15 @@ Criado para tirar dúvidas configurações e alguns dos principais comandos util
 
 ## Sumário
 
-1. [Comandos Básicos](#comandos-básicos)
-2. [Trabalhando com Branches](#trabalhando-com-branches)
-3. [Repositórios Remotos](#repositórios-remotos)
-4. [Visualização de Histórico](#visualização-de-histórico)
-5. [Desfazendo Mudanças](#desfazendo-mudanças)
+1. [Configuração Git](#configuracao-git)
+2. [Autenticação com GitHub](#aitenticacao-github)
+3. [Comandos Básicos](#comandos-básicos)
+4. [Trabalhando com Branches](#trabalhando-com-branches)
+5. [Repositórios Remotos](#repositórios-remotos)
+6. [Visualização de Histórico](#visualização-de-histórico)
+7. [Desfazendo Mudanças](#desfazendo-mudanças)
+8. [Reset de Commit](#reset-de-commit)
+
 ## Configuração Git
 
 Exibe informações de configuração da ferramenta Git e variáveis de configuração.
@@ -32,7 +36,6 @@ Configuração do repositório.
 ```
 
 Para configuração do nome e email do usuário, utilizamos o comando.
-
 ```
 git config --global user.name "nome_do_usuario"
 ```
@@ -79,7 +82,6 @@ git init
 ```
 
 Para vincular esse diretorio a um repositório remoto.
-
 ```
 git remote add origin URL
 ``` 
@@ -87,16 +89,13 @@ git remote add origin URL
 Subistituindo o URL pelo link HTTPS do repositório no GitHub
 
 
-
 #### Para clonar um repositório criado no GitHub, utilizamos o comando:
-
 ```
 git clone URL
 ```
 
 Sendo URL o link HTTPS encontrado na página do repositório.
 Caso deseje renomear o repositório localmente, utiliza-se:
-
 ```
 git clone URL nome_repositorio"
 ```
@@ -105,7 +104,6 @@ Subistituindo a URL pelo HTTPS do repositorio e "nome_repositorio" pelo nome des
 
 #### Verificar Status do repositório
 Mostra a situação dos arquivos no repositório (modificados, preparados para commit, não rastreados).
-
 ```
 git status
 ```
@@ -143,7 +141,7 @@ Atualiza seu repositório local com as alterações do repositório remoto.
 git pull
 ```
 
-### Trabalhando com Branches
+## Trabalhando com Branches
 Branches permitem que você trabalhe em diferentes versões de um repositório ao mesmo tempo. Isso é útil para gerenciar novas funcionalidades, correções de bugs ou experimentos sem afetar a branch principal (geralmente main ou master).
 
 #### Criar uma Nova Branch
@@ -181,7 +179,7 @@ Use este comando com cautela para remover uma branch que possui alterações nã
 git branch -D nome_da_branch
 ```
 
-### Repositórios Remotos
+## Repositórios Remotos
 Repositórios remotos são versões de seu projeto que estão hospedadas na internet ou em uma rede. Eles permitem a colaboração com outros desenvolvedores e o backup de seu trabalho.
 
 #### Adicionar um Repositório Remoto
@@ -207,7 +205,7 @@ Renomeia um repositório remoto. Use este comando quando quiser mudar o nome de 
 git remote rename nome_antigo nome_novo
 ```
 
-### Visualização de Histórico
+## Visualização de Histórico
 É importante visualizar o histórico de commits para entender a evolução do projeto e acompanhar as mudanças feitas ao longo do tempo.
 
 #### Ver o Histórico de Commits
@@ -246,7 +244,7 @@ Mostra as diferenças entre a árvore de trabalho e o último commit. Use este c
 git diff HEAD
 ```
 
-### Desfazendo Mudanças
+## Desfazendo Mudanças
 Desfazer mudanças é uma parte crítica do fluxo de trabalho no Git. Existem várias maneiras de desfazer alterações dependendo do que você deseja alcançar.
 
 #### Desfazer Alterações no Arquivo da Árvore de Trabalho
@@ -294,9 +292,4 @@ Quando usar:
 - Quando você quer desfazer commits e descartar todas as alterações feitas nos arquivos desde esse commit. Use com cuidado, pois as alterações serão perdidas permanentemente.
 
 
-## 🚀 Sobre mim
-Me chamo Vinicius Mariath, tenho 33 anos, sou formado em Gastronomia, sempre estive próximo a área tecnológica, e agora me encontro em processo de transição de carreira para a área de desenvolvimento com foco em tecnologias backend, especialmente Java.
-
-## 🔗 Links
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vmariath/)
+**por: Vinicius Mariath**
