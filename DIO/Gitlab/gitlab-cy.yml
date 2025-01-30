@@ -1,16 +1,39 @@
-executar teste:
+# Jobs são executados sumultaneamento, porém com dependencias(needs), um só inicia após o outro ser finalizado.
+
+stages:
+  - teste
+  - build
+  - deploy
+
+executar_teste:
+  stage: teste
   before_script:
-    - echo "Preparando testes..."
+    -echo "Preparando testes..."
   script:
     - echo "Executando testes..."
-  
   after_script:
-    - echo "Apagando arquivos temporários..."
-  
-criar_imagens:
+    - echo "Apagando arquivos temporarios..."
+
+executar_teste2:
+  stage: teste
   script:
-    - echo "Criando as imagens.."
-  
-push_imagens :
+    - echo "Executando teste 2..."
+
+  criar_imagens:
+  stage: build
   script:
-    - echo "Realizando upload das imagens.."
+    - echo "Criando as imagens..."
+
+  push_imagens:
+  needs: # só será iniciado quando o criar_imagens for finalizado
+    - criar_imagens
+  stage: build
+  script:
+    - echo "Realizando upload das imagens..."
+
+  kubernetes:
+  stage: deploy
+  script:
+    - echo "Executando Deploty..."
+
+    
