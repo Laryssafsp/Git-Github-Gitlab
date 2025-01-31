@@ -10,13 +10,16 @@ executar_teste:
   stage: teste
   before_script:
     -echo "Preparando testes..."
+    - chmod +x ./script.sh # +x = permissão de execução
   script:
-    - echo "Executando testes..."
-    - pwd # mostrar o diretório atual
-    - ls
-    - cat /etc/os-release # versão da máquina
-    - mkdir pipeline
-    - ls
+    - ./script.sh
+   # script: ou adicionar o arquivo
+   #  - echo "Executando testes..."
+   #  - pwd # mostrar o diretório atual
+   #  - ls
+   #  - cat /etc/os-release # versão da máquina
+   #  - mkdir pipeline
+   #  - ls
   after_script:
     - echo "Apagando arquivos temporarios..."
 
