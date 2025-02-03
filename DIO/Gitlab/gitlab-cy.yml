@@ -29,20 +29,26 @@ executar_teste2:
     - echo "Executando teste 2..."
 
   criar_imagens:
+  only:
+    - main
   stage: build
   script:
     - echo "Criando as imagens..."
 
-  push_imagens:
-  needs: # só será iniciado quando o criar_imagens for finalizado
-    - criar_imagens
-  stage: build
-  script:
-    - echo "Realizando upload das imagens..."
+push_imagens:
+    only:
+    - main
+    needs: # só será iniciado quando o criar_imagens for finalizado
+      - criar_imagens
+    stage: build
+      script:
+        - echo "Realizando upload das imagens..."
 
   kubernetes:
-  stage: deploy
-  script:
-    - echo "Executando Deploty..."
+    only:
+    - main
+    stage: deploy
+    script:
+      - echo "Executando Deploty..."
 
     
