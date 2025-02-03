@@ -1,6 +1,13 @@
 # Win
-# Jobs são executados sumultaneamento, porém com dependencias(needs), um só inicia após o outro ser finalizado.
+# Jobs são executados simultaneamento, porém com dependencias(needs), um só inicia após o outro ser finalizado.
+# worksflow: subtitui o only (que mostra em qual branch executar) em cada step para criar as regras gerais
 
+worksflow:
+  rules:
+    - if: $CI-COMMIT_BRANCH != "main"
+      when: never #nenhum job sera executado se o branch for diferente de main
+    - when: always
+    
 stages:
   - teste
   - build
