@@ -2,6 +2,10 @@
 # Jobs são executados simultaneamento, porém com dependencias(needs), um só inicia após o outro ser finalizado.
 # worksflow: subtitui o only (que mostra em qual branch executar) em cada step para criar as regras gerais
 
+# indica que essa imagem será utilizada em todos os JOBS, 
+# pode especificar em cada JOB também adicionando nos jobs que deseja.
+image: node:19.1 
+
 worksflow:
   rules:
     - if: $CI-COMMIT_BRANCH != "main"
@@ -31,6 +35,7 @@ executar_teste:
     - echo "Apagando arquivos temporarios..."
 
 executar_teste2:
+  image: node:19.1 
   stage: teste
   script:
     - echo "Executando teste 2..."
