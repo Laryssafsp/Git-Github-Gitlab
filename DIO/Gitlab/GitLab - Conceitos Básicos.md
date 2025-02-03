@@ -54,3 +54,6 @@ git push --set-upstream origin test
 Por exemplo, executar apenas o job de testes na nova branch criada, então adiciona um parâmetro `only` no scrip. 
 
 
+https://gitlab.c3sl.ufpr.br/pet/treinamentoGit/-/wikis/home
+https://aws.amazon.com/pt/docker/
+
