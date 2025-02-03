@@ -1,4 +1,4 @@
-#Formacao Gitlab CICD
+# Formacao Gitlab CICD
 CI/CD é o coração do DevOps
 
 ### Versionamento
@@ -38,4 +38,19 @@ Quando a integração contínua for implementada adequadamente, os desenvolvedor
 ## O que é o GitLab?
 
 O GitLab é um repositório Git que fornece repositórios abertos e privados e outros recursos. E uma plataforma completa de DevOps que permite que os profissionais executem todas as tarefas em um projeto, desde o planejamento do projeto, passando pelo gerenciamento do código-fonte até o monitoramento e a segurança.
+
+
+
+# Codes
+
+## GITLAB
+
+#### Subir branch para gitlab - e sobe para produção
+```
+git push --set-upstream origin test
+```
+
+#### pode especificar quais jobs serão executados
+Por exemplo, executar apenas o job de testes na nova branch criada, então adiciona um parâmetro `only` no scrip. 
+
 
