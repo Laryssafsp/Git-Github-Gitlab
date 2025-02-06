@@ -43,6 +43,11 @@ git config --global user.name "nome_do_usuario"
 git config --global user.email "email_usuario"
 ```
 
+Visualializar configurações
+```
+git config --list
+```
+
 Para configuração da branch padrão
 ```
 git config init.defaultBranch
