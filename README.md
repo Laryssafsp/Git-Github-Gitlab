@@ -270,12 +270,13 @@ Cria um novo commit que desfaz as alterações de um commit anterior. O históri
 git revert <hash-do-commit>
 ```
 
+### Stash 
+```git pop```
 
-### Retornar ao Commit anterior
-```bash
-git reset --soft HEAD^  
+### Retornar o comit
 ```
-comentar :: retornando ao commit anterior
+git reset --soft HEAD^
+```
 
 ## Reset de Commit
 ### Tipos
