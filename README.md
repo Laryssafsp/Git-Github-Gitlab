@@ -271,6 +271,12 @@ git revert <hash-do-commit>
 ```
 
 
+### Retornar ao Commit anterior
+```bash
+git reset --soft HEAD^  
+```
+comentar :: retornando ao commit anterior
+
 ## Reset de Commit
 ### Tipos
 1. `--soft`
