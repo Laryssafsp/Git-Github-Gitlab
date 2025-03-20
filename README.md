@@ -47,7 +47,14 @@ Visualializar configurações
 ```
 git config --list
 ```
-
+Renomear branch:
+```
+git branch -m new-branch-name
+```
+Puxar os arquivos da branch
+```
+git push --set-upstream origin <branch>
+```
 Para configuração da branch padrão
 ```
 git config init.defaultBranch
