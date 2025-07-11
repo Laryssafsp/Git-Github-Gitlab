@@ -143,7 +143,7 @@ git commit -m "mensagem do commit"
 #### Enviar alterações para o repositório remoto
 
 ```
-git push origin nome_da_branch
+git push -u origin nome_da_branch
 ```
 #### Baixando alterações do repositório remoto
 
