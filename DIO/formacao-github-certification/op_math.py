@@ -1,13 +1,19 @@
-#Descrição: Agora vamos calcular a média de três notas fornecidas na entrada do usuário. Uma dica é: Utilize operadores aritméticos para realizar o cálculo da média.
+# Descrição: Vamos solicitar como entrada dois números e depois vamos realizar uma operação simples entre eles.
+# escolhendo a operação a ser realizada.
+# Entrada: O usuário deve fornecer dois números e escolher a operação a ser realizada.
+# Saída: O resultado da operação escolhida entre os dois números fornecidos.
 
-input1 = float(input("Digite a primeira nota: "))
-input2 = float(input("Digite a segunda nota: "))
-input3 = float(input("Digite a terceira nota: "))
-media = (input1 + input2 + input3) / 3
-print(f"A média das notas é: {media}")
+input1 = float(input("Digite o primeiro número: "))
+input2 = float(input("Digite o segundo número: "))
+op = input("Digite a operação a ser realizada (+, -, *, /): ")
 
-# Inseriondo os valoes separados por ","
-input1, input2, input3 = map(float, input("Digite as três notas separadas por vírgula: ").split(","))
-media = (input1 + input2 + input3) / 3
-print(f"A média das notas é: {media}")
+if op == "+":
+    resultado = input1 + input2
+elif op == "-":
+    resultado = input1 - input2
+elif op == "*":
+    resultado = input1 * input2
+elif op == "/":
+    resultado = input1 / input2
 
+print(f"O resultado da operação é ({op}):", resultado)
